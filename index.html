@@ -93,6 +93,12 @@
             <h3>🔑 アカウントログイン</h3>
             <input type="text" id="username" placeholder="ユーザー名">
             <input type="password" id="passphrase" placeholder="合言葉（パスワード）">
+            
+            <p style="font-size: 11px; color: var(--text-sub); margin-top: 15px; line-height: 1.4; text-align: center; letter-spacing: 0.3px;">
+                Powered by Perry<br>
+                If you encounter any issues, please contact Perry via WhatsApp at +852 5546 6430.
+            </p>
+
             <button class="btn-modern" onclick="login()">ログイン</button>
         </div>
 
@@ -185,7 +191,7 @@
         if (userRole === "admin") {
             addTab(tabs, "⚙️ アカウント管理", "ADMIN_PAGE");
             addTab(tabs, "🤝 全体会議", "room_all_members");
-            addTab(tabs, "🏢 対：会社窓口", "room_client_admin");
+            addTab(tabs, "🏢 对：会社窓口", "room_client_admin");
             systemData.friends.forEach(f => {
                 addTab(tabs, `🔍 検閲：${f.name}`, `room_client_${f.name}`);
             });
